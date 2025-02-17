@@ -2,6 +2,7 @@ package imotdev.tasklytodobackend.controller;
 
 import imotdev.tasklytodobackend.model.Todo;
 import imotdev.tasklytodobackend.service.TodoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/todos")
 public class TodoController {
+  @Autowired
   private TodoService todoService;
 
   @GetMapping
