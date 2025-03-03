@@ -15,10 +15,10 @@ public class Todo {
   public Todo() {
   }
 
-  public Todo(Long id, String title, Boolean isCompleted) {
-    this.id = id;
-    this.title = title;
+  public Todo(Boolean isCompleted, String title, Long id) {
     this.isCompleted = isCompleted;
+    this.title = title;
+    this.id = id;
   }
 
   public Long getId() {
@@ -37,11 +37,11 @@ public class Todo {
     this.title = title;
   }
 
-  public Boolean getCompleted() {
+  public Boolean getIsCompleted() {
     return isCompleted;
   }
 
-  public void setCompleted(Boolean completed) {
-    isCompleted = completed;
+  public void setIsCompleted(Boolean isCompleted) {
+    this.isCompleted = isCompleted;
   }
 }

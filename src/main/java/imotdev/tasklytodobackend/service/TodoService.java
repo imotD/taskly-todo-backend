@@ -24,7 +24,7 @@ public class TodoService {
     return todoRepository.findById(id)
             .map(todo -> {
               todo.setTitle(updatedTodo.getTitle());
-              todo.setCompleted(updatedTodo.getCompleted());
+              todo.setIsCompleted(updatedTodo.getIsCompleted());
               return todoRepository.save(todo);
             })
             .orElseThrow(() -> new RuntimeException("Todo not found"));
